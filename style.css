@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --font: "Roboto", serif;
+  --red: hsl(4, 100%, 91%);
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
+
+  --error: hsl(4, 100%, 63%);
+  --error-bg: hsl(9, 100%, 96%);
+
+  --valid: rgb(0, 210, 0);
+  --valid-bg: rgb(237, 255, 237);
+
+  --para: 16px;
+
+  --light: 400;
+  --dark: 700;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--blue-700);
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font);
+  gap: 1.5rem;
+}
+.head {
+  color: var(--blue-800);
+  font-size: 2.2rem;
+  font-weight: var(--dark);
+}
+.para,
+li {
+  font-size: var(--para);
+  color: var(--blue-700);
+}
+
+li {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  line-height: 2;
+}
+
+.label {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#email-label,
+#email-error {
+  font-size: 0.8rem;
+  font-weight: var(--dark);
+}
+#email-error {
+  font-size: 0.9rem;
+}
+
+#email {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--custom-border, var(--grey));
+  outline: none;
+  background-color: var(--custom-bg, var(--white));
+}
+
+.btn {
+  width: 100%;
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid transparent;
+  font-weight: var(--dark);
+  font-size: 0.9rem;
+  color: var(--white);
+  background-color: var(--blue-800);
+  cursor: pointer;
+}
+.thank {
+  font-family: var(--font);
+  width: 16rem;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1.5rem 2.5rem;
+}
+
+.thank img {
+  width: 3rem;
+}
+
+.confirmation {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-weight: var(--light);
+}
+
+.confirm-email {
+  font-weight: var(--dark);
+  font-size: 0.9rem;
+}
+
+.mobile-img {
+  display: none;
+}
+.desktop-img {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-img {
+    display: block;
+    width: 100%;
+  }
+  .desktop-img {
+    display: none;
+  }
+  .newsletter {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .container {
+    padding: auto 0;
+    display: block;
+  }
+}
